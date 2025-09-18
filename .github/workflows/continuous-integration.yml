@@ -21,6 +21,8 @@ jobs:
           java-version: '17'
           check-latest: false
           cache: 'maven'
+          - name: Set up Java
+    # cache: 'maven' # Temporarily disable if issues persist
       - name: Build with Maven
         run: 'mvn package'
         shell: bash
